@@ -1,0 +1,94 @@
+{% extends 'authenticate/base.html' %}
+{%block content%}
+
+<style type="text/css">
+  html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    padding: 0;
+    display: block;
+    margin: 0 auto;
+    max-height: 100%;
+    max-width: 100%;
+}
+</style>
+
+<body  background="https://i.imgur.com/CGQl8zn.png">
+
+<h1 class="text-center">Talk of the town : Twitter Analysis</h1>
+
+<form method="POST" action="{% url 'datapass' %}"  >
+	{% csrf_token %}
+  <div class="form-group">
+    <input type="text" class="form-control" aria-describedby="emailHelp" placeholder="Enter A Topic " name="moviename">
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+
+
+
+
+
+ <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" style="width: 300px;height: 150px;margin-left: 800px"; >
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img class="d-block w-100" src=https://upload.wikimedia.org/wikipedia/commons/a/a7/Future_earth.jpg  alt="First slide">
+
+      <div class="carousel-caption d-none d-md-block">
+    <h5 style="color: white">Koffee With Karan</h5>
+    <p style="color: white">Why KL Rahul?</p>
+  </div>
+
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="https://upload.wikimedia.org/wikipedia/commons/a/a7/Future_earth.jpg" alt="Second slide">
+              
+      <div class="carousel-caption d-none d-md-block">
+    <h5 style="color: white">Koffee With Karan</h5>
+    <p style="color: white">Why KL Rahul?</p>
+  </div>
+   
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="https://upload.wikimedia.org/wikipedia/commons/a/a7/Future_earth.jpg" alt="Third slide" >
+
+
+      <div class="carousel-caption d-none d-md-block">
+    <h5 style="color: white">Koffee With Karan</h5>
+    <p style="color: white">Why KL Rahul?</p>
+  </div>
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+
+
+<div class="alert alert-dark" role="alert" style="margin-top: 80px">
+  <h5><b>How To Use</b></h5>
+  <li>As the name suggests it's a analytics tool which can help in reviewing 1000's of tweets to give you a proper result in graphical form!</li>
+  <li>Give it a shot! ..by writing anything,for example : Abdul Kalam.You will get something surprising! </li>
+  <li>Try to be as precise as possible and stick to one or two words for better results.</li>
+  <li>And most important thing is to <b>ENJOY!</b></li>
+</div>
+
+
+</body>
+
+{% endblock %}
